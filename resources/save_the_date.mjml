@@ -11,7 +11,7 @@
         <mj-image title="Beth & James - Celebrate with us on Febuary 11th, 2023" alt="Beth & James - Celebrate with us on Febuary 11th, 2023" container-background-color="#98522d" padding="30px 25px 10px 25px" src="https://bethandjames.us/resources/save_the_date.png" ></mj-image>
       </mj-column>
     </mj-section>
-    <mj-section background-color="#98522d"padding="20px 0">
+    <mj-section background-color="#98522d" padding="20px 0">
       <mj-column>
         <mj-text padding="0 25px 10px" letter-spacing="3px" font-size="24px" color="#FFF">
           <h2 style="padding:0;margin:0;">Margaret, Jay, and Pamela Goldberg,</h2>
