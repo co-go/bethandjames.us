@@ -1,0 +1,31 @@
+<mjml owa="desktop" version="4.10.1">
+  <mj-head>
+    <mj-attributes>
+        <mj-text font-family="Crimson Text,Georgia,Baskerville,serif" />
+    </mj-attributes>
+    <mj-font href="https://fonts.googleapis.com/css?family=Crimson+Text" name="Crimson Text"></mj-font>
+  </mj-head>
+  <mj-body background-color="#cec6b8">
+    <mj-section padding="0">
+      <mj-column vertical-align="top">
+        <mj-image title="Beth & James - Celebrate with us on Febuary 11th, 2023" alt="Beth & James - Celebrate with us on Febuary 11th, 2023" container-background-color="#98522d" padding="30px 25px 10px 25px" src="https://bethandjames.us/resources/save_the_date.png" ></mj-image>
+      </mj-column>
+    </mj-section>
+    <mj-section background-color="#98522d"padding="20px 0">
+      <mj-column>
+        <mj-text padding="0 25px 10px" letter-spacing="3px" font-size="24px" color="#FFF">
+          <h2 style="padding:0;margin:0;">Margaret, Jay, and Pamela Goldberg,</h2>
+        </mj-text>
+        <mj-text padding="10px 25px">
+          <p class="text-build-content" data-testid="bLMU9PFgjD" style="margin: 10px 0;; margin-top: 10px; margin-bottom: 10px"><span style="color:#ffffff;font-family:Crimson Text, Arial, Helvetica, sans-serif;font-size:13px;">We kindly ask that you save the date for our wedding celebration in Baltimore, Maryland on Saturday, the 11th of February, 2023.</span></p>
+        </mj-text>
+        <mj-text align="left" color="#000000" font-family="Arial, sans-serif" font-size="16px" letter-spacing="normal" padding-bottom="0px" padding-top="0px" padding="10px 25px">
+          <p class="text-build-content" data-testid="qNW8T-V5T" style="margin: 10px 0;; margin-top: 10px; margin-bottom: 10px"><span style="color:#ffffff;font-family:Crimson Text, Arial, Helvetica, sans-serif;font-size:13px;">Formal invitation to follow.</span></p>
+        </mj-text>
+        <mj-text align="left" color="#000000" font-family="Arial, sans-serif" font-size="24px" letter-spacing="normal" padding-bottom="0px" padding-top="0px" padding="10px 25px">
+          <h2 class="text-build-content" data-testid="JB4oV4ZHt" style="margin-top: 10px; margin-bottom: 10px"><span style="color:#ffffff;font-family:Crimson Text, Arial, Helvetica, sans-serif;font-size:24px;">❤️ Beth and James</span></h2>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>
