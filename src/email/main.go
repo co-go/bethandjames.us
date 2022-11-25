@@ -10,6 +10,7 @@ import (
 	"github.com/joho/godotenv"
 	"github.com/mailjet/mailjet-apiv3-go"
 	"github.com/tobgu/qframe"
+	"github.com/tobgu/qframe/config/csv"
 	"github.com/tobgu/qframe/config/groupby"
 )
 
@@ -18,7 +19,7 @@ func createClient(clientId, clientSecret string) *mailjet.Client {
 }
 
 func send(client *mailjet.Client, emailAddress, name, familyName string) {
-	fmt.Printf("Sending email to: %s", emailAddress)
+	fmt.Printf("Sending email to: %s\n", emailAddress)
 
 	recipientName := name
 	if familyName != "" {
@@ -80,8 +81,8 @@ func load(reader io.Reader) qframe.QFrame {
 		return &cleanName
 	}
 
-	f := qframe.ReadCSV(reader)
-	f = f.
+	f := qframe.
+		ReadCSV(reader, csv.IgnoreEmptyLines(true), csv.Types(map[string]string{"Family": "string"})).
 		GroupBy(groupby.Columns("Titling", "Family")).
 		Aggregate(qframe.Aggregation{Fn: listFn, Column: "EMail"}).
 		Filter(qframe.Filter{Column: "EMail", Comparator: "=", Arg: "Unknown", Inverse: true}).
