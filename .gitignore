@@ -1,1 +1,5 @@
 .DS_Store
+list.csv
+test_list.csv
+go.work
+.env
