@@ -1,0 +1,32 @@
+<mjml owa="desktop">
+  <mj-head>
+    <mj-attributes>
+        <mj-text font-family="Crimson Text,Georgia,Baskerville,serif" color="#FFF"/>
+    </mj-attributes>
+    <mj-font href="https://fonts.googleapis.com/css?family=Crimson+Text" name="Crimson Text"></mj-font>
+  </mj-head>
+  <mj-body background-color="#cec6b8">
+    <mj-section padding="0">
+      <mj-column vertical-align="top">
+        <mj-image title="Celebrate with us" alt="Beth & James - Celebrate with us on Febuary 11th, 2023" container-background-color="#98522d" padding="30px 25px 10px 25px" src="https://bethandjames.us/resources/save_the_date.png"></mj-image>
+      </mj-column>
+    </mj-section>
+    <mj-section background-color="#98522d">
+      <mj-column>
+        <mj-text padding="0 25px 10px" letter-spacing="3px">
+          <h2 style="padding:0;margin:0;font-weight:normal">
+            {% if var:family_name != "" %}{{ var:family_name }}{% else %}{{ var:name }}{% endif %},
+          </h2>
+        </mj-text>
+        <mj-text padding="10px 25px" letter-spacing="0.5px" font-size="16px">
+          <p style="padding:0;margin:0 0 10px;">{% if var:family_name != "" %}{{ var:name }}, {% endif %}we kindly ask that you save the date for our wedding celebration in <i>baltimore, maryland</i> on <i>saturday, the 11th of february, 2023</i>.</p>
+          <p style="padding:0;margin:0;"><i>formal invitation to follow.</i></p>
+        </mj-text>
+        <mj-text padding="10px 25px" letter-spacing="1px">
+          <p style="padding:0;margin:0 0 10px 0;letter-spacing:3px;font-size:16px;">sincerely,</p>
+          <h2 style="padding:0;margin:0;font-weight:normal;">beth and james corley-goldberg</h2>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>
