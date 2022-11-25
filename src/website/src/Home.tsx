@@ -1,23 +1,26 @@
 import React from 'react';
+import { Header, Item } from './components/Header';
+import { MoneyShot } from './components/MoneyShot';
+import { PlanPicture } from './components/PlanPicture';
+import { Timeline } from './components/Timeline';
 import styles from './Home.module.sass';
 
 const Home = () => {
   return (
-    <div className="section1">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header>
+        <Item name='rsvp' />
+        <Item name='travel' />
+        <Item name='timeline' />
+        <Item name='faq' />
+        <Item name='registry' />
+      </Header>
+      <MoneyShot />
+      <div className={styles.planSection}>
+        <div className={styles.image}><PlanPicture /></div>
+        <div className={styles.timeline}><Timeline /></div>
+      </div>
+    </>
   );
 }
 

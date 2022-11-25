@@ -1,6 +1,14 @@
+@use "colors"
+
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text:ital@0;1&display=swap")
+@font-face
+  font-family: "Sydney Regular"
+  src: url("fonts/SydneyRegular.otf") format("opentype")
+
 body
   margin: 0
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif
+  font-family: "Crimson Text", serif
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
-  background-color: #98522D
+  background-color: colors.$light
+  color: #fff
