@@ -8,6 +8,7 @@ import styles from './Home.module.sass';
 import RSVPSection from './components/RSVPSection';
 import TravelSection from './components/TravelSection';
 import FAQSection from './components/FAQSection';
+import RegistrySection from './components/RegistrySection';
 
 const Home = () => {
   const sections = [
@@ -81,6 +82,7 @@ const Home = () => {
         <FAQSection />
       </div>
       <div ref={sections[5].ref} className={styles.registrySection}>
+        <RegistrySection />
       </div>
     </div>
   );
