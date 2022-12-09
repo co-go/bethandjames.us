@@ -7,14 +7,17 @@
   justify-content: center
   flex-direction: column
   &:before
-    top: 1rem
+    top: 1.2rem
     left: calc(-1.5rem + 1px)
     position: absolute
     content: ""
     display: block
     width: 2px
-    height: 70%
+    height: 69%
     background-color: white
+
+  @media (max-width: 600px)
+    margin: 0 0 8rem
 
 .event
   position: relative
@@ -22,15 +25,16 @@
   flex-direction: column
   margin: 1rem 0
   &:before
-    left: -2rem
+    margin-top: 0.2rem
+    left: -1.75rem
     position: absolute
     content: ""
     display: block
-    width: 1rem
-    height: 1rem
+    width: 0.5rem
+    height: 0.5rem
     border-radius: 1rem
     border: 2px solid white
-    background-color: colors.$secondary-accent
+    background-color: white
 
 .specialStandard
   font-size: 2rem

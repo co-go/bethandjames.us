@@ -1,6 +1,18 @@
 @use 'styles/colors'
 
 .planSection
-  background-color: colors.$primary-accent
   display: flex
   justify-content: center
+  align-items: center
+  @media (max-width: 600px)
+    flex-direction: column
+
+
+.container
+  transition: background-color 0.5s
+
+.headerBg
+  background-color: colors.$light
+
+.timelineBg
+  background-color: colors.$primary-accent

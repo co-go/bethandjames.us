@@ -128,14 +128,14 @@ func main() {
 		log.Fatalf("Dataframe generated incorrectly!")
 	}
 
-	mailjetClient := createClient(os.Getenv("MAILJET_CLIENT_ID"), os.Getenv("MAILJET_CLIENT_SECRET"))
+	// mailjetClient := createClient(os.Getenv("MAILJET_CLIENT_ID"), os.Getenv("MAILJET_CLIENT_SECRET"))
 
 	for i := 0; i < nameView.Len(); i++ {
 		fmt.Printf("\n%s | %s | %s\n", *emailView.ItemAt(i), *nameView.ItemAt(i), *familyNameView.ItemAt(i))
 		addresses := strings.Split(*emailView.ItemAt(i), ",")
 		for _, email := range addresses {
 			fmt.Printf(" -> %s\n", email)
-			send(mailjetClient, email, *nameView.ItemAt(i), *familyNameView.ItemAt(i))
+			// send(mailjetClient, email, *nameView.ItemAt(i), *familyNameView.ItemAt(i))
 		}
 	}
 
