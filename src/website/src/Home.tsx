@@ -1,6 +1,6 @@
-import React, { FC, useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import cx from "classnames";
-import { Header, Item } from './components/Header';
+import { Header } from './components/Header';
 import { MoneyShot } from './components/MoneyShot';
 import { PlanPicture } from './components/PlanPicture';
 import { Timeline } from './components/Timeline';

@@ -10,7 +10,7 @@ export const PlanPicture: FC = () => {
         <img src={pic} alt="stomp" />
       </Parallax>
       <Parallax className={styles.title} speed={-3}>
-        <div>the plan</div>
+        <div>timeline</div>
       </Parallax>
     </div>
   )
