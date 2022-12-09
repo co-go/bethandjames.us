@@ -1,12 +1,12 @@
 @use 'styles/colors'
 
 .planSection
+  padding: 5rem 2rem
   display: flex
   justify-content: center
   align-items: center
   @media (max-width: 600px)
     flex-direction: column
-
 
 .container
   transition: background-color 0.5s
@@ -14,5 +14,11 @@
 .headerBg
   background-color: colors.$light
 
-.timelineBg
+.rsvpBg
   background-color: colors.$primary-accent
+
+.timelineBg
+  background-color: colors.$light
+
+.travelBg
+  background-color: rgba(colors.$primary-accent, 0.8)

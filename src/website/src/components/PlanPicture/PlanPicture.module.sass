@@ -2,9 +2,9 @@
 
 .container
   position: relative
-  margin: 5rem 3rem
+  margin: 0 3rem
   img
-    width: 300px
+    width: auto
     height: 500px
     object-fit: cover
     border-radius: 2rem
@@ -15,3 +15,6 @@
   right: -1rem
   font-family: "Sydney Regular"
   font-size: 3rem
+  @media (max-width: 600px)
+    top: 3rem
+    right: 40%

@@ -5,10 +5,15 @@ import cx from "classnames";
 import menu from "./menu-animated.json"
 
 type HeaderProps = {
-  active: Number
+  active: Number,
+  sections: Array<{
+    ref: React.RefObject<HTMLDivElement>;
+    bgClass: string;
+    label: string;
+  }>
 }
 
-export const Header: FC<HeaderProps> = ({ active }) => {
+export const Header: FC<HeaderProps> = ({ active, sections }) => {
   const [isOpen, setOpen] = useState(false);
   const [sticky, setSticky] = useState(false);
 
@@ -34,15 +39,22 @@ export const Header: FC<HeaderProps> = ({ active }) => {
   return (
     <>
       <div className={cx(styles.header, isOpen && styles.open, sticky && styles.sticky )}>
-        <Item name='rsvp' />
-        <Divider />
-        <Item name='timeline' active={active === 1} />
-        <Divider />
-        <Item name='travel' active={active === 2} />
-        <Divider />
-        <Item name='faq' active={active === 3} />
-        <Divider />
-        <Item name='registry' active={active === 4} />
+        {sections.map((section, i) => {
+          const item = <Item
+            key={`item-${i}`}
+            name={section.label}
+            active={active === i+1}
+            onClick={() => {
+              closeMenu()
+              section.ref.current!.scrollIntoView({behavior: "smooth"})}
+            }
+          />
+
+          return <React.Fragment key={`item-${i}`}>
+            {item}
+            {(i !== sections.length - 1) && <Divider key={`div-${i}`} />}
+          </React.Fragment>
+        })}
       </div>
       <div className={styles.menu_button} onClick={() => {
         setOpen(!isOpen)
@@ -59,8 +71,9 @@ const Divider: FC = () => <hr className={styles.divider} />
 type ItemProps = {
   name: string
   active?: boolean
+  [x:string]: any
 }
 
-export const Item: FC<ItemProps> = ({ name, active = false }) => {
-  return (<div className={cx(styles.item, active && styles.active)}>{name}</div>)
+export const Item: FC<ItemProps> = ({ name, active = false, ...rest }) => {
+  return (<div className={cx(styles.item, active && styles.active)} {...rest}>{name}</div>)
 }
