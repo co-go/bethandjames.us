@@ -23,7 +23,7 @@ const RegistrySection: FC = () => {
         <h3>we have a handful of options to contribute virtually, but will gladly accept anything physical as well.</h3>
         <div style={{ display: "flex", gap: "1rem" }}>
           <a className={styles.button} href="https://www.venmo.com/u/corleygoldberg" rel="noreferrer" target="_blank"><Venmo />venmo</a>
-          <a className={styles.button} href="http://paypal.me/corleyj" rel="noreferrer" target="_blank"><Paypal />paypal</a>
+          <a className={styles.button} href="https://paypal.me/corleyj" rel="noreferrer" target="_blank"><Paypal />paypal</a>
           <a className={styles.button} href="https://example.com" rel="noreferrer" target="_blank"><Zelle />zelle</a>
         </div>
       </div>
