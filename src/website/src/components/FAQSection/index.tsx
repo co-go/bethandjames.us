@@ -48,7 +48,7 @@ const FAQSection: FC = () => {
         <h2>will there be an open bar or cash bar?</h2>
         <span>open bar!</span>
 
-        <h1>If you have any further questions about the day, feel free to reach out to James or Beth!</h1>
+        <h1>if you have any further questions about the day, feel free to reach out to james or beth!</h1>
       </div>
     </div>
   )
