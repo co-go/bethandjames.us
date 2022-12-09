@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/bethandjames.us/static/css/main.2a973f45.css",
-    "main.js": "/bethandjames.us/static/js/main.81bc794a.js",
-    "static/js/787.73fc3771.chunk.js": "/bethandjames.us/static/js/787.73fc3771.chunk.js",
-    "static/media/wassup.jpeg": "/bethandjames.us/static/media/wassup.98d73d05328b7850f25f.jpeg",
-    "static/media/stomp.jpeg": "/bethandjames.us/static/media/stomp.ee1b962da36cc39a64cb.jpeg",
-    "static/media/dawg.jpeg": "/bethandjames.us/static/media/dawg.f9aac5545aed6ecf658a.jpeg",
-    "static/media/field.jpeg": "/bethandjames.us/static/media/field.0bfb783b753633f9c2c8.jpeg",
-    "static/media/mooovin.jpeg": "/bethandjames.us/static/media/mooovin.fe154bdc8abf5217148b.jpeg",
-    "static/media/the_pic.jpeg": "/bethandjames.us/static/media/the_pic.c4e21dabc00132eff5f5.jpeg",
-    "static/media/SydneyRegular.otf": "/bethandjames.us/static/media/SydneyRegular.fa8e06dec47a7e68b7ef.otf",
-    "static/media/paypal.svg": "/bethandjames.us/static/media/paypal.d054b545eb8c82a6ef31d65d99f5ef01.svg",
-    "static/media/venmo.svg": "/bethandjames.us/static/media/venmo.502a52f7b00d0e46dbaeb119b3e406de.svg",
-    "index.html": "/bethandjames.us/index.html",
-    "static/media/zelle.svg": "/bethandjames.us/static/media/zelle.99f2f9ccb107f2e2a1323d47d91ffac4.svg",
-    "main.2a973f45.css.map": "/bethandjames.us/static/css/main.2a973f45.css.map",
-    "main.81bc794a.js.map": "/bethandjames.us/static/js/main.81bc794a.js.map",
-    "787.73fc3771.chunk.js.map": "/bethandjames.us/static/js/787.73fc3771.chunk.js.map"
+    "main.css": "/static/css/main.1154c59e.css",
+    "main.js": "/static/js/main.e8eb306c.js",
+    "static/js/787.73fc3771.chunk.js": "/static/js/787.73fc3771.chunk.js",
+    "static/media/wassup.jpeg": "/static/media/wassup.98d73d05328b7850f25f.jpeg",
+    "static/media/stomp.jpeg": "/static/media/stomp.ee1b962da36cc39a64cb.jpeg",
+    "static/media/dawg.jpeg": "/static/media/dawg.f9aac5545aed6ecf658a.jpeg",
+    "static/media/field.jpeg": "/static/media/field.0bfb783b753633f9c2c8.jpeg",
+    "static/media/mooovin.jpeg": "/static/media/mooovin.fe154bdc8abf5217148b.jpeg",
+    "static/media/the_pic.jpeg": "/static/media/the_pic.c4e21dabc00132eff5f5.jpeg",
+    "static/media/SydneyRegular.otf": "/static/media/SydneyRegular.fa8e06dec47a7e68b7ef.otf",
+    "static/media/paypal.svg": "/static/media/paypal.d054b545eb8c82a6ef31d65d99f5ef01.svg",
+    "static/media/venmo.svg": "/static/media/venmo.502a52f7b00d0e46dbaeb119b3e406de.svg",
+    "index.html": "/index.html",
+    "static/media/zelle.svg": "/static/media/zelle.99f2f9ccb107f2e2a1323d47d91ffac4.svg",
+    "main.1154c59e.css.map": "/static/css/main.1154c59e.css.map",
+    "main.e8eb306c.js.map": "/static/js/main.e8eb306c.js.map",
+    "787.73fc3771.chunk.js.map": "/static/js/787.73fc3771.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2a973f45.css",
-    "static/js/main.81bc794a.js"
+    "static/css/main.1154c59e.css",
+    "static/js/main.e8eb306c.js"
   ]
 }
