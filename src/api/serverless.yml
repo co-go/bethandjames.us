@@ -1,0 +1,59 @@
+org: jwcorle
+app: rsvp-wedding
+service: rsvp-wedding
+
+frameworkVersion: "3"
+
+plugins:
+  - serverless-plugin-log-retention
+  - serverless-offline
+
+provider:
+  name: aws
+  runtime: go1.x
+  region: us-east-1
+  environment:
+    DYNAMODB_TABLE: ${self:service}-table
+  iam:
+    role:
+      name: ${self:service}-role
+      statements:
+        - Effect: Allow
+          Action:
+            - dynamodb:Query
+            - dynamodb:GetItem
+            - dynamodb:PutItem
+            - dynamodb:UpdateItem
+            - dynamodb:DeleteItem
+          Resource: "arn:aws:dynamodb:${self:provider.region}:*:table/${self:provider.environment.DYNAMODB_TABLE}"
+
+package:
+  patterns:
+    - "!./**"
+    - "./bin/**"
+
+functions:
+  handler:
+    name: rsvp-wedding-handler
+    handler: bin/main
+    logRetentionInDays: 1
+    url:
+      cors: true
+
+resources:
+  Resources:
+    UserTable:
+      Type: 'AWS::DynamoDB::Table'
+      DeletionPolicy: Retain
+      Properties:
+        AttributeDefinitions:
+          - AttributeName: Name
+            AttributeType: S
+        BillingMode: PROVISIONED
+        KeySchema:
+          - AttributeName: Name
+            KeyType: HASH
+        ProvisionedThroughput:
+          ReadCapacityUnits: 5
+          WriteCapacityUnits: 5
+        TableName: ${self:provider.environment.DYNAMODB_TABLE}
