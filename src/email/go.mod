@@ -1,4 +1,4 @@
-module github.com/jam/bethandjames.us
+module github.com/jam/bethandjames.us/email
 
 go 1.19
 
