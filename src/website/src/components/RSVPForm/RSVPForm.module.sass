@@ -1,0 +1,127 @@
+.container
+  height: 100vh
+  margin: 0
+  display: flex
+  align-items: center
+  justify-content: center
+
+.content
+  width: 80%
+  height: 100%
+  position: fixed
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-direction: column
+  transition: transform 600ms ease 0s, opacity 300ms ease 0s
+
+  &.before
+    opacity: 0
+    transform: translateY(-100vh)
+
+  &.current
+    opacity: 1
+    transform: translateY(0)
+
+  &.after
+    opacity: 0
+    transform: translateY(100vh)
+
+.positioner
+  max-width: 600px
+  gap: 1rem
+  display: flex
+  justify-content: center
+  flex-direction: column
+
+.question
+  font-size: 2rem
+
+.questionNumberWrapper
+  position: relative
+  height: 2rem
+  display: flex
+  -webkit-box-align: center
+  align-items: center
+
+.questionNumber
+  font-size: 1.5rem
+  padding-right: 1rem
+  position: absolute
+  right: 100%
+
+.questionWrapper
+  position: relative
+  display: flex
+  align-items: center
+  overflow-wrap: break-word
+
+.input
+  display: block
+  width: 100%
+  font-family: inherit
+  color: white
+  padding: 0px 0px 8px
+  border: none
+  outline: none
+  border-radius: 0px
+  appearance: none
+  background-image: none
+  background-position: initial
+  background-size: initial
+  background-repeat: initial
+  background-attachment: initial
+  background-origin: initial
+  background-clip: initial
+  transform: translateZ(0px)
+  font-size: 2rem
+  -webkit-font-smoothing: antialiased
+  line-height: unset
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.3)
+  animation: 1ms ease 0s 1 normal none running native-autofill-in
+  transition: background-color 1e+08s ease 0s, box-shadow 0.1s ease-out 0s
+  box-shadow: rgb(255 255 255 / 30%) 0px 1px
+  background-color: transparent !important
+
+  &:focus
+    box-shadow: white 0px 2px
+
+  &.filled
+    -webkit-text-fill-color: white
+
+.textarea
+  appearance: none
+  display: block
+  width: 100%
+  font-family: inherit
+  color: white
+  padding: 0px 0px 8px
+  border-radius: 0px
+  border: none
+  outline: none
+  background-color: transparent
+  font-size: 30px
+  line-height: 38px
+  overflow-wrap: break-word
+  resize: none
+  overflow: hidden
+  transition: box-shadow 0.1s ease-out 0s
+  box-shadow: rgb(100 78 2 / 30%) 0px 1px
+
+.actionContainer
+  display: flex
+  gap: 1rem
+
+
+.warningContainer
+  display: flex
+  align-items: center
+  gap: 0.5rem
+  background-color: rgb(247, 230, 230)
+  padding: 0.5rem
+  border-radius: 0.5rem
+  color: rgb(175, 4, 4)
+
+.warningIcon
+  height: 1rem
+  fill: rgb(175, 4, 4)

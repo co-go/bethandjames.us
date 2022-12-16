@@ -1,18 +1,34 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { ParallaxProvider } from 'react-scroll-parallax';
+import {
+  createHashRouter,
+  RouterProvider,
+} from "react-router-dom";
 import './styles/global.sass';
 import Home from './Home';
 import reportWebVitals from './reportWebVitals';
+import RSVPForm from './components/RSVPForm';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 
+const router = createHashRouter([
+  {
+    path: "/",
+    element: <Home />,
+  },
+  {
+    path: "/rsvp",
+    element: <RSVPForm />,
+  },
+]);
+
 root.render(
   <React.StrictMode>
     <ParallaxProvider>
-      <Home />
+      <RouterProvider router={router} />
     </ParallaxProvider>
   </React.StrictMode>
 );
