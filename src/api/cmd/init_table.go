@@ -80,9 +80,6 @@ func main() {
 			GroupMembers:    strings.Split(row["Group"].(string), ","),
 			Titling:         row["Titling"].(string),
 			Family:          row["Family"].(string),
-			Attending:       "UNKNOWN",
-			AttendingBrunch: "",
-			Restrictions:    "",
 		}
 
 		item, err := attributevalue.MarshalMap(person)

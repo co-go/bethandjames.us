@@ -4,6 +4,7 @@
   display: flex
   align-items: center
   justify-content: center
+  background-color: #98522d
 
 .content
   width: 80%
@@ -33,6 +34,29 @@
   display: flex
   justify-content: center
   flex-direction: column
+
+.backHome
+  z-index: 5
+  transition: all 0.3s
+  position: fixed
+  top: 1rem
+  left: 1rem
+  color: white
+  text-decoration: none
+  fill: white
+  font-size: 1rem
+
+  .backIcon
+    height: 1rem
+    padding-left: 0.5rem
+    display: inline-block
+    vertical-align: middle
+    transform: rotate(180deg)
+
+  &:hover
+    left: 0.8rem
+    color: rgba(255, 255, 255, 0.8)
+    fill: rgba(255, 255, 255, 0.8)
 
 .question
   font-size: 2rem

@@ -11,5 +11,7 @@ type Person struct {
 	// rsvp fields
 	Attending       string `json:"attendingEvent,omitempty"`
 	AttendingBrunch string `json:"attendingBrunch,omitempty"`
+	Entree          string `json:"entree,omitempty"`
 	Restrictions    string `json:"restrictions,omitempty"`
+	Covid           string `json:"covid,omitempty"`
 }

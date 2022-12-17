@@ -75,7 +75,32 @@ func (h *handler) handleRequest(ctx context.Context, request events.LambdaFuncti
 
 		return createResponse(PersonResponse{Result: person}, http.StatusOK), nil
 	} else if request.RequestContext.HTTP.Method == http.MethodPost {
-		return createResponse(BaseResponse{Message: "Invoked POST Handler"}, http.StatusOK), nil
+		var person *rsvp.Person
+		err := json.Unmarshal([]byte(request.Body), &person)
+		if err != nil {
+			return createResponse(FailureResponse{Error: err.Error()}, http.StatusInternalServerError), nil
+		}
+
+		_, err = h.client.UpdateItem(context.TODO(), &dynamodb.UpdateItemInput{
+			Key: map[string]types.AttributeValue{
+				"Name": &types.AttributeValueMemberS{Value: person.Name},
+			},
+			TableName:        aws.String(os.Getenv("DYNAMODB_TABLE")),
+			UpdateExpression: aws.String("SET Attending=:attendingEvent, AttendingBrunch=:attendingBrunch,Entree=:entree,Restrictions=:restrictions,Covid=:covid"),
+			ExpressionAttributeValues: map[string]types.AttributeValue{
+				":attendingEvent":  &types.AttributeValueMemberS{Value: person.Attending},
+				":attendingBrunch": &types.AttributeValueMemberS{Value: person.AttendingBrunch},
+				":entree":          &types.AttributeValueMemberS{Value: person.Entree},
+				":restrictions":    &types.AttributeValueMemberS{Value: person.Restrictions},
+				":covid":           &types.AttributeValueMemberS{Value: person.Covid},
+			},
+		})
+
+		if err != nil {
+			return createResponse(FailureResponse{Error: err.Error()}, http.StatusInternalServerError), nil
+		}
+
+		return createResponse(BaseResponse{Message: "Successfully submitted RSVP."}, http.StatusOK), nil
 	}
 
 	return events.LambdaFunctionURLResponse{
