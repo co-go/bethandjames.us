@@ -19,18 +19,18 @@ const TravelSection: FC = () => {
           <h1>transportation</h1>
           <h2>by <span className={styles.special}>Air</span></h2>
           <h3>BWI</h3>
-          <a className={styles.specialLink} href="https://www.bwiairport.com/" target="_blank" rel="noreferrer">Baltimore/Washington International Thurgood Marshall Airport</a>
+          <div><a className={styles.specialLink} href="https://www.bwiairport.com/" target="_blank" rel="noreferrer">Baltimore/Washington International Thurgood Marshall Airport</a></div>
           <span>(8.9 miles from venue)</span>
           <br />
 
           <h3>DCA</h3>
-          <a className={styles.specialLink} href="https://www.flyreagan.com/" target="_blank" rel="noreferrer">Ronald Reagan Washington National Airport</a>
+          <div><a className={styles.specialLink} href="https://www.flyreagan.com/" target="_blank" rel="noreferrer">Ronald Reagan Washington National Airport</a></div>
           <span>(44.1 miles from venue)</span>
           <br />
 
           <h2>by <span className={styles.special}>Train</span></h2>
           <h3>Amtrack</h3>
-          <a className={styles.specialLink} href="https://www.amtrak.com/stations/bal" target="_blank" rel="noreferrer">Baltimore, MD - Penn Station (BAL)</a>
+          <div><a className={styles.specialLink} href="https://www.amtrak.com/stations/bal" target="_blank" rel="noreferrer">Baltimore, MD - Penn Station (BAL)</a></div>
           <span>(3.9 miles from venue)</span>
         </div>
       </div>
