@@ -40,7 +40,7 @@ const TravelSection: FC = () => {
         <h1 className={styles.subtitle}>lodging</h1>
         <div className={styles.hotelWrapper}>
           <div className={styles.lodgingContainer}>
-            <h2><a className={styles.specialLink} href="https://www.hilton.com/en/book/reservation/deeplink/?ctyhocn=BWIHPPY&groupCode=COGO&arrivaldate=2023-02-07&departuredate=2023-02-14&cid=OM,WW,HILTONLINK,EN,DirectLink&fromId=HILTONLINKDIRECT" target="_blank" rel="noreferrer">The Canopy *</a></h2>
+            <h2><a className={styles.specialLink} href="https://www.hilton.com/en/book/reservation/deeplink/?ctyhocn=BWIHPPY&groupCode=COGO&arrivaldate=2023-02-07&departuredate=2023-02-14&cid=OM,WW,HILTONLINK,EN,DirectLink&fromId=HILTONLINKDIRECT" target="_blank" rel="noreferrer">The Canopy</a></h2>
             <span>1215 Wills St<br />Baltimore, MD 21231</span>
             <span>(443) 422-6679</span>
             <span><i>(13 minutes from venue)</i></span>
@@ -52,13 +52,13 @@ const TravelSection: FC = () => {
             <span><i>(11 minutes from venue)</i></span>
           </div>
           <div className={styles.lodgingContainer}>
-            <h2><a className={styles.specialLink} href="https://www.hilton.com/en/book/reservation/deeplink/?ctyhocn=BWIHPPY&groupCode=COGO&arrivaldate=2023-02-07&departuredate=2023-02-14&cid=OM,WW,HILTONLINK,EN,DirectLink&fromId=HILTONLINKDIRECT" target="_blank" rel="noreferrer">Another Hotel *</a></h2>
-            <span>1215 Street St<br />Baltimore, MD 21231</span>
-            <span>(443) 422-6679</span>
+            <h2><a className={styles.specialLink} href="https://www.hyatt.com/en-US/hotel/maryland/hyatt-place-baltimore-inner-harbor/bwizh?corp_id=G-CGBW" target="_blank" rel="noreferrer">Hyatt Place Baltimore</a></h2>
+            <span>511 S Central Ave<br />Baltimore, MD 21202</span>
+            <span>(410) 558-1840</span>
             <span><i>(10 minutes from venue)</i></span>
           </div>
         </div>
-        <b className={styles.details}>* rooms have been blocked at these hotels, use the links above or mention <i>corley-goldberg</i> to get a group rate!</b>
+        <b className={styles.details}>rooms have been blocked at these hotels, use the links above or mention <i>corley-goldberg</i> to get a group rate!</b>
         <p className={styles.details}>
           these are not the only options! feel free to look at <a className={styles.specialLink} href="https://www.airbnb.com/" target="_blank" rel="noreferrer">airbnb</a> or other hotels around the inner harbor in Baltimore.
         </p>
