@@ -82,7 +82,11 @@ const RSVPForm: FC = () => {
   const questions = [
     {
       question: <><i>Hey there!</i> What is your name?</>,
-      onNext: async () => getRsvpDetails(name),
+      onNext: async () => {
+        const prettyName = name.split(" ").map(s => s.charAt(0).toUpperCase() + s.slice(1)).join(" ")
+        setName(prettyName)
+        return getRsvpDetails(prettyName)
+      },
       input: <input className={cx(styles.input, name.length > 0 && styles.filled)} type="text" placeholder="Joe Smith" onChange={(e) => setName(e.target.value)} value={name} />,
       value: name
     },
