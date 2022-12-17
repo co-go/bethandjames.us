@@ -88,18 +88,26 @@ const RSVPForm: FC = () => {
     },
     {
       question: <><b>Thanks {name}!</b> Who do you want to RSVP for?</>,
-      input: <Select name="rsvpee" options={party} onChange={(e) => setRsvpee(e.target.value)} value={rsvpee} />,
+      input: <Select name="rsvpee" options={party.map(p => ({ value: p, node: <>{p}</>}))} onChange={(e) => setRsvpee(e.target.value)} value={rsvpee} />,
       value: rsvpee
     },
     {
       question: <>Will {youOrName} be able to attend our wedding celebration on Feburary 11th, 2023?</>,
-      input: <Select name="attendance" options={["Yes", "No"]} onChange={(e) => setAttendance(e.target.value)} value={attendance} />,
+      input: <Select name="attendance" options={["Yes", "No"].map(p => ({ value: p, node: <>{p}</>}))} onChange={(e) => setAttendance(e.target.value)} value={attendance} />,
       value: attendance,
       triggerSubmit: attendance === "No"
     },
     {
       question: <>What would {youOrName} like for an entrée?</>,
-      input: <Select name="entree" options={["Vegan Eggplant Parmesan", "Vegan Cauliflower Steak"]} onChange={(e) => setEntree(e.target.value)} value={entree} />,
+      input: <Select
+        name="entree"
+        options={[
+          { value: "Roasted Cauliflower Steak", node: <div><b>Vegan Cauliflower Steak (V)(GF)</b><p style={{ margin: 0 }}>oyster mushrooms, honeyboat squash mousseline, green garlic sage vegan butter, charred hearty greens, currants</p></div>},
+          { value: "Eggplant \"Parmesan\"", node: <div><b>Eggplant "Parmesan" (V)(GF)</b><p style={{ margin: 0 }}>gluten free panko-herb crusted eggplant, pomodoro arabiata, charred rapini pesto, gluten free orzo, garlic chips, roasted tiny tomatoes, nutritional yeast</p></div>},
+        ]}
+        onChange={(e) => setEntree(e.target.value)}
+        value={entree}
+      />,
       value: entree
     },
     {
@@ -109,12 +117,14 @@ const RSVPForm: FC = () => {
     },
     {
       question: <>You are also invited to a brunch on February 12th, 2023. Will {youOrName} be attending the brunch?</>,
-      input: <Select name="brunch" options={["Yes", "No"]} onChange={(e) => setBrunch(e.target.value)} value={brunch} />,
+      input: <Select name="brunch" options={["Yes", "No"].map(p => ({ value: p, node: <>{p}</>}))} onChange={(e) => setBrunch(e.target.value)} value={brunch} />,
       value: brunch
     },
     {
-      question: <>COVID-19 is sirius.</>,
-      input: <Select name="covid" options={["Vaccinated with atleast one booster", "Exempt and will contact Beth/James to clarify"]} onChange={(e) => setCovid(e.target.value)} value={covid} />,
+      question: <span>~~Insert rest of COVID blurb here~~
+
+      <b>If you are not vaccinated, with at least 1 follow-up booster shot - please do not attend the reception.</b></span>,
+      input: <Select name="covid" options={["Vaccinated with atleast one booster", "Exempt and will contact Beth/James to clarify"].map(p => ({ value: p, node: <>{p}</>}))} onChange={(e) => setCovid(e.target.value)} value={covid} />,
       value: covid,
       triggerSubmit: true
     },
