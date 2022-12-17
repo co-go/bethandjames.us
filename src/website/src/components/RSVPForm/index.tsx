@@ -73,7 +73,7 @@ const RSVPForm: FC = () => {
   });
 
   const youOrName = (name === rsvpee || rsvpee === "") ? "you" : rsvpee.split(" ")[0]
-  let submitText = <><i>Woohoo!</i>Thanks for RSVPing! We can't wait to party with {youOrName}.</>
+  let submitText = <><i>Woohoo!</i> Thanks for RSVPing! We can't wait to party with {youOrName}.</>
 
   if (attendance === "No") {
     submitText = <><i>That's okay!</i> {youOrName.charAt(0).toUpperCase() + youOrName.slice(1)} will be missed!</>
