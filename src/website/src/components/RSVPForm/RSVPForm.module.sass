@@ -8,7 +8,8 @@
 
 .content
   width: 80%
-  height: 100%
+  height: 90%
+  overflow: hidden
   position: fixed
   display: flex
   align-items: center
@@ -29,10 +30,10 @@
     transform: translateY(100vh)
 
 .positioner
-  max-width: 600px
+  max-width: 800px
   gap: 1rem
   display: flex
-  justify-content: center
+  overflow: hidden auto
   flex-direction: column
 
 .backHome
@@ -61,22 +62,21 @@
 .question
   font-size: 2rem
 
-.questionNumberWrapper
-  position: relative
-  height: 2rem
-  display: flex
-  -webkit-box-align: center
-  align-items: center
+// .questionNumberWrapper
+//   position: relative
+//   height: 2rem
+//   display: flex
+//   -webkit-box-align: center
+//   align-items: center
 
 .questionNumber
   font-size: 1.5rem
-  padding-right: 1rem
-  position: absolute
-  right: 100%
+  margin-bottom: 1rem
 
 .questionWrapper
   position: relative
   display: flex
+  flex-direction: column
   align-items: center
   overflow-wrap: break-word
 

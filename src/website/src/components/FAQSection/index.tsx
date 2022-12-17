@@ -33,7 +33,7 @@ const FAQSection: FC = () => {
 
           <div className={styles.question}>
             <h2>is there parking at the venue?</h2>
-            <span>yes! the venue has ample parking. however, as will be having an open bar (YAY), there are plenty of option for ubers, lyfts, etc.</span>
+            <span>yes! the venue has ample parking. however, as there will be an open bar (YAY), there are plenty of option for ubers, lyfts, etc.</span>
           </div>
 
           <div className={styles.question}>
@@ -43,12 +43,12 @@ const FAQSection: FC = () => {
 
           <div className={styles.question}>
             <h2>where is the event located?</h2>
-            <span>the event is at the winslow (333 w ostend st. baltimore, md 21230) and will be held entirely indoors.</span>
+            <span>the event is at <a className={styles.link} href="https://www.winslowbaltimore.com/" target="_blank" rel="noreferrer">the winslow (333 w ostend st. baltimore, md 21230)</a> and will be held entirely indoors.</span>
           </div>
 
           <div className={styles.question}>
             <h2>will there be a ceremony?</h2>
-            <span>nope.</span>
+            <span>as we eloped this passed June, this event will be a celebration of our marriage. this means that we will not have a ceremony, but will be skipping to the best parts of a wedding (the drinking, eating, and dancing!)</span>
           </div>
 
           <div className={styles.question}>
@@ -58,7 +58,7 @@ const FAQSection: FC = () => {
 
           <div className={styles.question}>
             <h2>what time should i arrive?</h2>
-            <span>please arrive at the start of the event (5:30pm), where we will schmooze and have hors d'oeuvres.</span>
+            <span>please arrive at the start of the event (6:00pm), where we will schmooze and have hors d'oeuvres.</span>
           </div>
 
           <div className={styles.question}>

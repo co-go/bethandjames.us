@@ -23,6 +23,7 @@ const customStyles = {
     borderRadius: "2rem",
     backgroundColor: "#98522D",
     transform: 'translate(-50%, -50%)',
+    padding: '3rem',
   },
   overlay: {
     zIndex: 10,
@@ -40,7 +41,6 @@ const RegistrySection: FC = () => {
         isOpen={modalIsOpen}
         onRequestClose={() => setIsOpen(false)}
         style={customStyles}
-        contentLabel="Example Modal"
         closeTimeoutMS={300}
       >
         <h3 className={styles.closeText} onClick={() => setIsOpen(false)}>close</h3>
@@ -75,11 +75,11 @@ const RegistrySection: FC = () => {
           <img src={pic} alt="field" />
         </Parallax>
         <Parallax className={styles.title} speed={-1}>
-          <div>registry</div>
+          <div>Registry</div>
         </Parallax>
       </div>
       <div className={styles.content}>
-        <h2>the most important thing to us is that you are able to celebrate with us. however, if you wish to give a gift, we will gratefully accept any contribution towards one of our funds!</h2>
+        <h2>the most important thing to us is that we are able to celebrate together. however, if you wish to give a gift, we will gratefully accept any contribution towards one of our funds!</h2>
 
         <h3>we have a handful of options to contribute virtually, but will gladly accept anything physical as well.</h3>
         <div className={styles.funds}>

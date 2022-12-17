@@ -73,7 +73,7 @@ const RSVPForm: FC = () => {
   });
 
   const youOrName = (name === rsvpee || rsvpee === "") ? "you" : rsvpee.split(" ")[0]
-  let submitText = <><i>Woohoo!</i> Thanks for RSVPing! We can't wait to party with {youOrName}.</>
+  let submitText = <><i>Woohoo!</i> Thanks for RSVPing! We can't wait to party with {youOrName}. Feel free to edit these responses at any time before January 11th, 2023.</>
 
   if (attendance === "No") {
     submitText = <><i>That's okay!</i> {youOrName.charAt(0).toUpperCase() + youOrName.slice(1)} will be missed!</>
@@ -121,9 +121,13 @@ const RSVPForm: FC = () => {
       value: brunch
     },
     {
-      question: <span>~~Insert rest of COVID blurb here~~
-
-      <b>If you are not vaccinated, with at least 1 follow-up booster shot - please do not attend the reception.</b></span>,
+      question: <span>
+        We are so fortunate to have 8 grandparents attending our wedding reception. Their well-being is our main concern. Please be mindful of any cold/flu/covid symptoms, that you may experience prior to the reception. Of course, if you are feeling unwell 24-48 hours prior, or if you know you have been exposed - please take care of yourself and stay home. You will be missed, but as stated, the compassionate and caring choice is for all to be well, especially the elderly and immunocompromised that will be at the reception. Along this same line of thought is the consideration of Covid protection through vaccination/booster.
+        <br /><br />
+        <b>If you are not vaccinated, with at least 1 follow-up booster shot - please do not attend the reception.</b>
+        <br /><br />
+        Please consider self-testing before the reception. Getting together with family and friends to celebrate joyous occasions is so special. We look forward to seeing you all in good health, and with your dancing shoes on.
+      </span>,
       input: <Select name="covid" options={["Vaccinated with atleast one booster", "Exempt and will contact Beth/James to clarify"].map(p => ({ value: p, node: <>{p}</>}))} onChange={(e) => setCovid(e.target.value)} value={covid} />,
       value: covid,
       triggerSubmit: true

@@ -4,9 +4,9 @@ import styles from './Timeline.module.sass';
 export const Timeline: FC = () => {
   return (
     <div className={styles.container}>
-      <Event time="6:00 pm - 7:00 pm" text={<SpecialText text="drink"/>} />
-      <Event time="7:00 pm - 9:00 pm" text={<SpecialText text="dine"/>} />
-      <Event time="9:00 pm - 11:00 pm" text={<SpecialText text="dance"/>} />
+      <Event time="6:00 pm - 7:15 pm" text={<SpecialText text="drink"/>} />
+      <Event time="7:30 pm - 8:30 pm" text={<SpecialText text="dine"/>} />
+      <Event time="8:30 pm - 11:00 pm" text={<SpecialText text="dance"/>} />
     </div>
   )
 }
