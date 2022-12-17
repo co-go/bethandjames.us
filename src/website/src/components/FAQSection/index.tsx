@@ -15,38 +15,57 @@ const FAQSection: FC = () => {
         </Parallax>
       </div>
       <div className={styles.content}>
-        <h2>what should i wear?</h2>
-        <span>black tie mixed with cyberpunk-themed masquerade attire.</span>
+        <div className={styles.questions}>
+          <div className={styles.question}>
+            <h2>is there a dress code?</h2>
+            <span>yes! we request formal attire, including but not limited to, tea length/floor length dresses, and suits with tie/bow tie. feel free to wear any color you like, as our goal is for everyone to feel confident in whatever they choose to wear.</span>
+          </div>
 
-        <h2>are kids welcome?</h2>
-        <span>nope, leave them at home.</span>
+          <div className={styles.question}>
+            <h2>can I bring a date?</h2>
+            <span>due to limited space, we are only able to accommodate those guests formally invited on your wedding invitation. if you have any questions about who is invited within your group, when RSVPing, you should be able to see all names. thank you for understanding!</span>
+          </div>
 
-        <h2>where should I stay?</h2>
-        <span>there are plenty of options in the city for you to pick from. we've reserved a couple of room blocks at some hotels we'd reccommend, linked under the <i>travel</i> section.</span>
+          <div className={styles.question}>
+            <h2>are kids welcome?</h2>
+            <span>we love your little ones! however, we have decided to keep our wedding reception an adults only event.</span>
+          </div>
 
-        <h2>will the event be indoors or outdoors?</h2>
-        <span>all indoors</span>
+          <div className={styles.question}>
+            <h2>is there parking at the venue?</h2>
+            <span>yes! the venue has ample parking. however, as will be having an open bar (YAY), there are plenty of option for ubers, lyfts, etc.</span>
+          </div>
 
-        <h2>what should I do if I cannot make it?</h2>
-        <span>we'll miss your company! please respond "no" to the rsvp form so we can adjust accordingly.</span>
+          <div className={styles.question}>
+            <h2>where should i stay?</h2>
+            <span>there are many hotels within 20 minutes or less of our venue. we have also confirmed room blocks at a variety of hotels if you would like to utilize them! please check the 'travel' section for more details.</span>
+          </div>
 
-        <h2>what should I do if i'm not feeling well?</h2>
-        <span>due to the potential risk to our other guests, we'd ask that you would stay home. while we would love to be able to party with you, we will find another, safer, opportunity to do so!</span>
+          <div className={styles.question}>
+            <h2>where is the event located?</h2>
+            <span>the event is at the winslow (333 w ostend st. baltimore, md 21230) and will be held entirely indoors.</span>
+          </div>
 
-        <h2>what time should I arrive?</h2>
-        <span>feel free to arrive at 5:30 pm, at the start of the event</span>
+          <div className={styles.question}>
+            <h2>will there be a ceremony?</h2>
+            <span>nope.</span>
+          </div>
 
-        <h2>how do I get to the venue?</h2>
-        <span>there is enough free parking for our entire party at the venue, so feel free to drive up, or use your favorite ride-sharing service (uber, lyft, ...) to come by!</span>
+          <div className={styles.question}>
+            <h2>is the venue wheelchair accessible? </h2>
+            <span>yes! the venue is ADA friendly.</span>
+          </div>
 
-        <h2>can I bring a plus one?</h2>
-        <span>unfortunately, due to budget, only those listed on your invite can attend</span>
+          <div className={styles.question}>
+            <h2>what time should i arrive?</h2>
+            <span>please arrive at the start of the event (5:30pm), where we will schmooze and have hors d'oeuvres.</span>
+          </div>
 
-        <h2>will there be special dietary food options (e.g., gluten free or vegan)?</h2>
-        <span>while everything that we are serving on the day is vegan, if you have further dietary restrictions, please be sure to note them when submitting your rsvp!</span>
-
-        <h2>will there be an open bar or cash bar?</h2>
-        <span>open bar!</span>
+          <div className={styles.question}>
+            <h2>will there be special dietary food options (e.g., gluten free or vegan)?</h2>
+            <span>yes! while everything being served is vegan, if you have any further dietary restrictions or allergies, please note them when you submit your rsvp.</span>
+          </div>
+        </div>
 
         <h1>if you have any further questions about the day, feel free to reach out to james or beth!</h1>
       </div>
