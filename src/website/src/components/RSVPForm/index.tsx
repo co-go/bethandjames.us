@@ -89,7 +89,7 @@ const RSVPForm: FC = () => {
     {
       question: <><i>Hey there!</i> What is your name?</>,
       onNext: async () => {
-        const prettyName = name.split(" ").map(s => s.charAt(0).toUpperCase() + s.slice(1)).join(" ")
+        const prettyName = name.trim().split(" ").map(s => s.charAt(0).toUpperCase() + s.slice(1)).join(" ")
         setName(prettyName)
         return getRsvpDetails(prettyName)
       },
