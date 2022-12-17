@@ -79,7 +79,7 @@ const RSVPForm: FC = () => {
   });
 
   const youOrName = (name === rsvpee || rsvpee === "") ? "you" : rsvpee.split(" ")[0]
-  let submitText = <><i>Woohoo!</i> Thanks for RSVPing! We can't wait to party with {youOrName}. Feel free to edit these responses at any time before January 11th, 2023.</>
+  let submitText = <><i>Woohoo!</i> Thanks for RSVPing! We can't wait to party with {youOrName}. Feel free to edit these responses at any time before January 14th, 2023.</>
 
   if (attendance === "No") {
     submitText = <><i>That's okay!</i> {youOrName.charAt(0).toUpperCase() + youOrName.slice(1)} will be missed!</>
@@ -126,7 +126,7 @@ const RSVPForm: FC = () => {
       value: restrictions
     },
     {
-      question: <>You are also invited to a brunch on February 12th, 2023. Will {youOrName} be attending the brunch?</>,
+      question: <>You are also invited to a brunch on February 12th, 2023. Will {youOrName} be attending the brunch? <i>If you aren't sure, just pick one and you can change at any point later!</i></>,
       input: <Select name="brunch" options={["Yes", "No"].map(p => ({ value: p, node: <>{p}</>}))} onChange={(e) => setBrunch(e.target.value)} value={brunch} />,
       value: brunch
     },

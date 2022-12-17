@@ -17,7 +17,7 @@ const RSVPSection: FC = () => {
       </div>
       <div className={styles.content}>
         <h1>we'd love to have you!</h1>
-        <p>click the button below to rsvp (or edit your responses) for yourself and your party. <i>please be sure to respond by january 11th</i></p>
+        <p>click the button below to rsvp (or edit your responses) for yourself and your party. <i>please be sure to respond by january 14th</i></p>
         <Link className={styles.rsvpButton} to="/rsvp">let's party</Link>
       </div>
     </div>
