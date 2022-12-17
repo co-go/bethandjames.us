@@ -4,9 +4,9 @@ import styles from './Timeline.module.sass';
 export const Timeline: FC = () => {
   return (
     <div className={styles.container}>
-      <Event time="6:00 pm - 7:15 pm" text={<SpecialText text="drink"/>} />
-      <Event time="7:30 pm - 8:30 pm" text={<SpecialText text="dine"/>} />
-      <Event time="8:30 pm - 11:00 pm" text={<SpecialText text="dance"/>} />
+      <Event time="6:00 pm - 7:15 pm" text={<SpecialText text="drink"/>} description={<span>cocktail hour<br />hors d'oeuvres<br />live music<br />open bar</span>} />
+      <Event time="7:30 pm - 8:30 pm" text={<SpecialText text="dine" />} description={<span>entrance<br />dinner<br />speeches</span>} />
+      <Event time="8:30 pm - 11:00 pm" text={<SpecialText text="dance" />} description={<span>live music<br />open bar<br />desserts<br />having the time of your life</span>} />
     </div>
   )
 }
@@ -14,13 +14,14 @@ export const Timeline: FC = () => {
 type EventProps = {
   time: string;
   text: ReactNode
+  description: ReactNode
 }
 
-const Event: FC<EventProps> = ({time, text}) => (
+const Event: FC<EventProps> = ({time, text, description}) => (
   <div className={styles.event}>
-    <span>{time}</span>
+    <span><b>{time}</b></span>
     <span>{text}</span>
-    <span>the winslow<br />333 w ostend st, baltimore, md 21230</span>
+    <span>{description}</span>
   </div>
 )
 
