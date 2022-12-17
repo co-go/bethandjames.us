@@ -12,14 +12,20 @@ import { Link } from 'react-router-dom';
 const API_URL = 'https://zdk7dzkucirjhsa57w6ognt6pe0hzine.lambda-url.us-east-1.on.aws/rsvp';
 
 const submitForm = async (name: string, attendance: string, entree: string, restrictions: string, brunch: string, covid: string) => {
-  await axios.post(API_URL, {
-    name,
-    attendingEvent: attendance,
-    entree,
-    restrictions,
-    attendingBrunch: brunch,
-    covid
-  })
+  try {
+    await axios.post(API_URL, {
+      name,
+      attendingEvent: attendance,
+      entree,
+      restrictions,
+      attendingBrunch: brunch,
+      covid
+    })
+  } catch(e) {
+    console.error(e)
+    return false
+  }
+
   return true
 }
 
@@ -144,7 +150,7 @@ const RSVPForm: FC = () => {
   }
 
   if (!isInvitedToBrunch) {
-    questions.splice(questions.length - 2, 1)
+    questions.splice(questions.length - 3, 1)
   }
 
   return (
@@ -190,7 +196,7 @@ const RSVPForm: FC = () => {
                 disabled={i === questions.length - 1 || q.value?.trim().length === 0}
                 onClick={async () => {
                   if (q.triggerSubmit) {
-                    if (await submitForm(rsvpee, attendance, entree, restrictions, brunch, covid)) {
+                    if (await submitForm(rsvpee || name, attendance, entree, restrictions, brunch, covid)) {
                       setCurrQuestion(questions.length - 1)
                       setSubmitted(true)
                     } else {
