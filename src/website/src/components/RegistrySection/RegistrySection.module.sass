@@ -9,6 +9,7 @@
   @media (max-width: 600px)
     flex-direction: column
   img
+    transition: all 0.3s
     width: 100%
     height: 100%
     object-fit: cover
@@ -35,6 +36,64 @@
 
 .content
   max-width: 600px
+
+.funds
+  display: flex
+  gap: 20px
+  flex-direction: column
+
+.fund
+  border-width: 0.5rem
+  position: relative
+  height: 150px
+
+  .fundName
+    transition: all 0.3s
+    position: absolute
+    right: 1rem
+    top: calc(50% - 3rem)
+    font-family: "Sydney Regular"
+    letter-spacing: 0.2rem
+    font-size: 1.5rem
+    z-index: 5
+
+  &:hover
+    .fundName
+      letter-spacing: 0.3rem
+      right: 1.5rem
+
+    cursor: pointer
+    img
+      object-position: center 30%
+
+.bigTitle
+  margin: 0
+
+.blurb
+  margin: 0
+
+.closeText
+  text-align: right
+  margin: 0 0 1rem
+  cursor: pointer
+
+.linkWrapper
+  text-decoration: none
+  color: white
+
+.payRow
+  display: flex
+  height: 2rem
+  gap: 0.5rem
+  align-items: center
+  font-size: 1rem
+  margin: 1rem 0
+  svg
+    height: 100%
+    width: auto
+  .payLink
+    text-decoration: underline dotted
+    color: white
 
 .button
   backface-visibility: hidden
