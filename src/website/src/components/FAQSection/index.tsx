@@ -22,7 +22,7 @@ const FAQSection: FC = () => {
           </div>
 
           <div className={styles.question}>
-            <h2>can I bring a date?</h2>
+            <h2>can i bring a date?</h2>
             <span>due to limited space, we are only able to accommodate those guests formally invited on your wedding invitation. if you have any questions about who is invited within your group, when RSVPing, you should be able to see all names. thank you for understanding!</span>
           </div>
 
