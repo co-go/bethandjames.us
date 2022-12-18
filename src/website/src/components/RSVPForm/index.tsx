@@ -8,6 +8,7 @@ import toast, { Toaster } from 'react-hot-toast';
 import { useBeforeunload } from 'react-beforeunload';
 import Select from './Select';
 import { Link } from 'react-router-dom';
+import * as Sentry from "@sentry/react";
 
 const API_URL = 'https://zdk7dzkucirjhsa57w6ognt6pe0hzine.lambda-url.us-east-1.on.aws/rsvp';
 
@@ -22,7 +23,7 @@ const submitForm = async (name: string, attendance: string, entree: string, rest
       covid
     })
   } catch(e) {
-    console.error(e)
+    Sentry.captureException(e);
     return false
   }
 
@@ -48,6 +49,7 @@ const RSVPForm: FC = () => {
 
       if (res.data.result === null) {
         toast.error(`Oops! Name '${rsvpName}' was not found on our list. Please ensure it matches with your invitation (case-sensitive). If you are entering it correctly, reach out to James!`)
+        Sentry.captureMessage(`Unable to find name '${rsvpName}'`);
         return false
       }
 
@@ -60,7 +62,7 @@ const RSVPForm: FC = () => {
       setCovid(res.data.result.covid || "")
       return true
     } catch (e) {
-      console.log(e)
+      Sentry.captureException(e)
       toast.error(`Server error when looking up '${rsvpName}'. Please try again.`)
     }
     return false
@@ -138,7 +140,7 @@ const RSVPForm: FC = () => {
         <br /><br />
         Please consider self-testing before the reception. Getting together with family and friends to celebrate joyous occasions is so special. We look forward to seeing you all in good health, and with your dancing shoes on.
       </span>,
-      input: <Select name="covid" options={["Vaccinated with atleast one booster", "Exempt and will contact Beth/James to clarify"].map(p => ({ value: p, node: <>{p}</>}))} onChange={(e) => setCovid(e.target.value)} value={covid} />,
+      input: <Select name="covid" options={["Vaccinated with at least one booster", "Exempt and will contact Beth/James to clarify"].map(p => ({ value: p, node: <>{p}</>}))} onChange={(e) => setCovid(e.target.value)} value={covid} />,
       value: covid,
       triggerSubmit: true
     },
