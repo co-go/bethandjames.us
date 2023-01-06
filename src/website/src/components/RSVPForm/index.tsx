@@ -128,7 +128,16 @@ const RSVPForm: FC = () => {
       value: restrictions
     },
     {
-      question: <>You are also invited to a brunch on February 12th, 2023. Will {youOrName} be attending the brunch? <i>If you aren't sure, just pick one and you can change at any point later!</i></>,
+      question: <>
+        You are also invited to a brunch on February 12th, 2023. Will {youOrName} be attending the brunch? <i>If you aren't sure, just pick one and you can change at any point later!</i>
+
+        <hr />
+
+        <small>located at:</small><br />
+        <b>LIORA</b><br />
+        <span>414 Light St, Baltimore, MD 21202</span><br />
+        <span>from 8:30 AM to 11 AM</span>
+      </>,
       input: <Select name="brunch" options={["Yes", "No"].map(p => ({ value: p, node: <>{p}</>}))} onChange={(e) => setBrunch(e.target.value)} value={brunch} />,
       value: brunch
     },
