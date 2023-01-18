@@ -46,7 +46,7 @@ const TravelSection: FC = () => {
             <span><i>(13 minutes from venue)</i></span>
           </div>
           <div className={styles.lodgingContainer}>
-            <h2><a className={styles.specialLink} href="https://www.marriott.com/en-us/hotels/bwiwf-baltimore-marriott-waterfront/overview/" target="_blank" rel="noreferrer">The Marriott Waterfront</a></h2>
+            <h2><a className={styles.specialLink} href="https://book.passkey.com/go/CorleyGoldberg" target="_blank" rel="noreferrer">The Marriott Waterfront</a></h2>
             <span>700 Aliceanna St<br />Baltimore, MD 21202</span>
             <span>(410) 385-3000</span>
             <span><i>(11 minutes from venue)</i></span>

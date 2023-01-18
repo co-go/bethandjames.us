@@ -252,21 +252,27 @@ interface QuestionProps {
 }
 
 const Question: FC<QuestionProps> = ({ number, question, className, actions, input }) => {
+  const content = (new Date() > new Date("1/17/2023"))
+    ? <h1>RSVPs are closed! Please reach out to Beth or James if you need to make adjustments.</h1>
+    : <>
+      <div className={styles.questionWrapper}>
+        {number && <div className={styles.questionNumberWrapper}>
+          <div className={styles.questionNumber}>{number}.</div>
+        </div>}
+        <div className={styles.question}>{question}</div>
+      </div>
+      <div className={styles.inputContainer}>
+        {input}
+      </div>
+      <div className={styles.actionContainer}>
+        {actions}
+      </div>
+    </>
+
   return (
     <div className={cx(styles.content, className)}>
       <div className={styles.positioner}>
-        <div className={styles.questionWrapper}>
-          {number && <div className={styles.questionNumberWrapper}>
-            <div className={styles.questionNumber}>{number}.</div>
-          </div>}
-          <div className={styles.question}>{question}</div>
-        </div>
-        <div className={styles.inputContainer}>
-          {input}
-        </div>
-        <div className={styles.actionContainer}>
-          {actions}
-        </div>
+        {content}
       </div>
     </div>
   )

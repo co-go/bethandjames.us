@@ -14,6 +14,13 @@ import (
 	"github.com/tobgu/qframe/config/groupby"
 )
 
+const (
+	// subject = "Let's Celebrate | Save the Date"
+	// templateID = 4375156
+	subject    = "Beth and James Celebration | Brunch Details"
+	templateID = 4477641
+)
+
 func createClient(clientId, clientSecret string) *mailjet.Client {
 	return mailjet.NewMailjetClient(clientId, clientSecret)
 }
@@ -38,8 +45,8 @@ func send(client *mailjet.Client, emailAddress, name, familyName string) {
 					Name:  recipientName,
 				},
 			},
-			Subject:          "Let's Celebrate | Save the Date",
-			TemplateID:       4375156,
+			Subject:          subject,
+			TemplateID:       templateID,
 			TemplateLanguage: true,
 			Variables:        map[string]interface{}{"name": name, "family_name": familyName},
 		},
@@ -67,7 +74,6 @@ func load(reader io.Reader) qframe.QFrame {
 	}
 
 	trim := func(str *string) *string {
-		// fmt.Println(*str)
 		s := strings.TrimSpace(*str)
 		return &s
 	}
@@ -102,7 +108,6 @@ func load(reader io.Reader) qframe.QFrame {
 	// defer file.Close()
 
 	// f.ToJSON(file)
-
 }
 
 func main() {
@@ -112,7 +117,7 @@ func main() {
 		log.Fatalf("Error loading .env file (%v)", err)
 	}
 
-	f, err := os.Open("./resources/list.csv")
+	f, err := os.Open("./resources/test_list.csv")
 
 	if err != nil {
 		log.Fatalf("Error reading list (%v)", err)
@@ -128,14 +133,14 @@ func main() {
 		log.Fatalf("Dataframe generated incorrectly!")
 	}
 
-	// mailjetClient := createClient(os.Getenv("MAILJET_CLIENT_ID"), os.Getenv("MAILJET_CLIENT_SECRET"))
+	mailjetClient := createClient(os.Getenv("MAILJET_CLIENT_ID"), os.Getenv("MAILJET_CLIENT_SECRET"))
 
 	for i := 0; i < nameView.Len(); i++ {
 		fmt.Printf("\n%s | %s | %s\n", *emailView.ItemAt(i), *nameView.ItemAt(i), *familyNameView.ItemAt(i))
 		addresses := strings.Split(*emailView.ItemAt(i), ",")
 		for _, email := range addresses {
 			fmt.Printf(" -> %s\n", email)
-			// send(mailjetClient, email, *nameView.ItemAt(i), *familyNameView.ItemAt(i))
+			send(mailjetClient, email, *nameView.ItemAt(i), *familyNameView.ItemAt(i))
 		}
 	}
 
