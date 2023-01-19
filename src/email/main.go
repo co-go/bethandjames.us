@@ -63,8 +63,10 @@ func send(client *mailjet.Client, emailAddress, name, familyName string) {
 func load(reader io.Reader) qframe.QFrame {
 	listFn := func(emails []*string) *string {
 		combined := ""
+		found := map[string]bool{}
 		for _, email := range emails {
-			if len(*email) > 0 {
+			if len(*email) > 0 && !found[*email] {
+				found[*email] = true
 				combined += *email + ","
 			}
 		}
@@ -88,10 +90,11 @@ func load(reader io.Reader) qframe.QFrame {
 	}
 
 	f := qframe.
-		ReadCSV(reader, csv.IgnoreEmptyLines(true), csv.Types(map[string]string{"Family": "string"})).
-		GroupBy(groupby.Columns("Titling", "Family")).
+		ReadCSV(reader, csv.IgnoreEmptyLines(true), csv.Types(map[string]string{"Family": "string", "Brunch": "string"})).
+		GroupBy(groupby.Columns("Titling", "Family", "Brunch")).
 		Aggregate(qframe.Aggregation{Fn: listFn, Column: "EMail"}).
 		Filter(qframe.Filter{Column: "EMail", Comparator: "=", Arg: "Unknown", Inverse: true}).
+		Filter(qframe.Filter{Column: "Brunch", Comparator: "=", Arg: "Yes"}).
 		Apply(
 			qframe.Instruction{Fn: trim, DstCol: "email", SrcCol1: "EMail"},
 			qframe.Instruction{Fn: trim, DstCol: "family_name", SrcCol1: "Family"},
@@ -117,7 +120,7 @@ func main() {
 		log.Fatalf("Error loading .env file (%v)", err)
 	}
 
-	f, err := os.Open("./resources/test_list.csv")
+	f, err := os.Open("./resources/list.csv")
 
 	if err != nil {
 		log.Fatalf("Error reading list (%v)", err)

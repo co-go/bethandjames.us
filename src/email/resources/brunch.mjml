@@ -19,16 +19,16 @@
           </h2>
         </mj-text>
         <mj-text padding="10px 25px" letter-spacing="0.5px" font-size="16px">
-          <p style="padding:0;margin:0 0 20px;">{% if var:family_name != "" %}{{ var:name }}, {% endif %}whether or not you have had a chance to rsvp, we would love to be able to share the details for <b>our sunday brunch</b>, which you are invited to!</p>
-          <p style="padding:0;margin:0 0 10px;">brunch will be on <b>february 12th, 2023</b> at:</p>
+          <p style="padding:0;margin:0 0 20px;">{% if var:family_name != "" %}{{ var:name }}, {% endif %}we're excited to continue the celebration with you!</p>
+          <p style="padding:0;margin:0 0 10px;">brunch will held be on <b>february 12th, 2023</b> at:</p>
           <h2 style="padding:0;margin:0;">LIORA</h2>
           <p style="padding:0;margin:0 0 10px;">414 light st<br />baltimore, md 21202</p>
-          <p style="padding:0;margin:0;">from <b>8:30 am to 11 am</b></p>
+          <p style="padding:0;margin:0;">feel free to drop by <b>between 8:30am and 11am</b></p>
 
-          <p style="padding:0;margin:20px 0 0;">we're planning on having buffet-style platters with lots of yummy food (hazelnut pancakes, crepes, mac & cheese, and more). feel free to drop by anytime.</p>
+          <p style="padding:0;margin:20px 0 0;">plan on having buffet-style platters with lots of yummy food (hazelnut pancakes, crepes, mac & cheese, and more). we can't wait to see you! </p>
         </mj-text>
         <mj-text padding="10px 25px" letter-spacing="1px">
-          <p style="padding:0;margin:0 0 10px 0;letter-spacing:3px;font-size:16px;">sincerely,</p>
+          <p style="padding:0;margin:0 0 10px 0;letter-spacing:3px;font-size:16px;">love,</p>
           <h2 style="padding:0;margin:0;font-weight:normal;">beth and james corley-goldberg</h2>
         </mj-text>
       </mj-column>
