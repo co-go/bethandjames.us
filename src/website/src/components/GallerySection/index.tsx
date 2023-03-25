@@ -17,7 +17,7 @@ const GallerySection: FC = () => {
       <div className={styles.content}>
         <h1>thanks for partying with us!</h1>
         <p>click the button below to check out the pictures from the day!</p>
-        <a className={styles.rsvpButton} href="https://barbaraophotography.pic-time.com/FDLXFskKmVWXZ" target="_blank" rel="noreferrer">📸 view pictures</a>
+        <a className={styles.rsvpButton} href="https://barbaraophotography.pic-time.com/FDLXFskKmVWXZ" target="_blank" rel="noreferrer">view pictures</a>
       </div>
     </div>
   )
