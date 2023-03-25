@@ -9,6 +9,7 @@ import RSVPSection from './components/RSVPSection';
 import TravelSection from './components/TravelSection';
 import FAQSection from './components/FAQSection';
 import RegistrySection from './components/RegistrySection';
+import GallerySection from './components/GallerySection';
 
 const Home = () => {
   const sections = [
@@ -20,8 +21,13 @@ const Home = () => {
     {
       ref: useRef<HTMLDivElement>(null),
       bgClass: styles.rsvpBg,
-      label: "rsvp"
+      label: "gallery"
     },
+    // {
+    //   ref: useRef<HTMLDivElement>(null),
+    //   bgClass: styles.rsvpBg,
+    //   label: "rsvp"
+    // },
     {
       ref: useRef<HTMLDivElement>(null),
       bgClass: styles.timelineBg,
@@ -68,20 +74,23 @@ const Home = () => {
       <Header active={activeSection} sections={sections.slice(1)} />
       <div ref={sections[0].ref} />
       <MoneyShot />
-      <div ref={sections[1].ref} className={styles.rsvpSection}>
-        <RSVPSection />
+      <div ref={sections[1].ref}>
+        <GallerySection />
       </div>
+      {/* <div ref={sections[2].ref}>
+        <RSVPSection />
+      </div> */}
       <div ref={sections[2].ref} className={styles.planSection}>
         <PlanPicture />
         <Timeline />
       </div>
-      <div ref={sections[3].ref} className={styles.travelSection}>
+      <div ref={sections[3].ref}>
         <TravelSection />
       </div>
-      <div ref={sections[4].ref} className={styles.faqSection}>
+      <div ref={sections[4].ref}>
         <FAQSection />
       </div>
-      <div ref={sections[5].ref} className={styles.registrySection}>
+      <div ref={sections[5].ref}>
         <RegistrySection />
       </div>
     </div>
