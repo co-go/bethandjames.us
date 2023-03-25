@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.681ff73d.css",
-    "main.js": "/static/js/main.87e12e70.js",
+    "main.css": "/static/css/main.3de612a1.css",
+    "main.js": "/static/js/main.fc14c90d.js",
     "static/js/787.73fc3771.chunk.js": "/static/js/787.73fc3771.chunk.js",
-    "static/media/wassup.jpeg": "/static/media/wassup.98d73d05328b7850f25f.jpeg",
     "static/media/stomp.jpeg": "/static/media/stomp.ee1b962da36cc39a64cb.jpeg",
     "static/media/home.jpeg": "/static/media/home.a03ff9638b0ece54387b.jpeg",
     "static/media/dawg.jpeg": "/static/media/dawg.f9aac5545aed6ecf658a.jpeg",
     "static/media/field.jpeg": "/static/media/field.0bfb783b753633f9c2c8.jpeg",
+    "static/media/dancin.jpeg": "/static/media/dancin.3bfb9fec5e6a5cd36524.jpeg",
     "static/media/mooovin.jpeg": "/static/media/mooovin.fe154bdc8abf5217148b.jpeg",
     "static/media/the_pic.jpeg": "/static/media/the_pic.c4e21dabc00132eff5f5.jpeg",
     "static/media/night.jpeg": "/static/media/night.745851dc3ce03028351f.jpeg",
@@ -19,12 +19,12 @@
     "static/media/zelle.svg": "/static/media/zelle.99f2f9ccb107f2e2a1323d47d91ffac4.svg",
     "static/media/check-solid.svg": "/static/media/check-solid.b28a1148c04cd8d3a351898766c7780a.svg",
     "static/media/arrow-right-solid.svg": "/static/media/arrow-right-solid.ce14b76cb4e6dadda4014979c20d353d.svg",
-    "main.681ff73d.css.map": "/static/css/main.681ff73d.css.map",
-    "main.87e12e70.js.map": "/static/js/main.87e12e70.js.map",
+    "main.3de612a1.css.map": "/static/css/main.3de612a1.css.map",
+    "main.fc14c90d.js.map": "/static/js/main.fc14c90d.js.map",
     "787.73fc3771.chunk.js.map": "/static/js/787.73fc3771.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.681ff73d.css",
-    "static/js/main.87e12e70.js"
+    "static/css/main.3de612a1.css",
+    "static/js/main.fc14c90d.js"
   ]
 }
